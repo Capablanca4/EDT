@@ -1,0 +1,234 @@
+﻿@model BOBEmploiDuTemps;
+
+@using System.Globalization;
+
+@section Header{
+    <link rel="stylesheet" href="~/css/Callendar/index.css" asp-append-version="true" />
+}
+
+@section Scripts{
+    <script type="module" src="~/js/Callendar/index.js" asp-append-version="true"></script>
+}
+
+<div id="calendar" class="calendar flex">
+    <div class="calendar-hours">
+        <div class="cell"></div>
+        @foreach (Hour h in ViewBag.hours)
+        {
+            <div class="hour cell">
+                <p>
+                    @h.ToString()
+                </p>
+            </div>
+        }
+    </div>
+    <div id="calendar-days" class="calendar-days flex">
+        @foreach (DayEmploiDuTemps d in Model.Days)
+        {
+            <div class="calendar-day" day="@d.Day">
+                <div class="day-name cell">
+                    <p>@d.Name</p>
+                </div>
+                @foreach (HourEmploiDuTemps h in d.Hours)
+                {
+                    <div class="day-hour cell flex" hour="@((int)h.Hour)">
+                        @foreach(Lesson lesson in h.Lessons)
+                        {
+                            <div id="@lesson.ID" class="lesson oneElement" duration="@((int)lesson.Duration)" hour="@((int)lesson.HourID)" day="@((int)lesson.Day)">
+                                <span class="lesson-student">@lesson.Student</span>
+                                <br />
+                                <span class="lesson-name">@lesson.Name</span>
+                                <br />
+                                <div class="flex flex-evenly">
+                                    <div class="lesson-week">@lesson.Week</div>
+                                    <div class="lesson-room">@lesson.Room</div>
+                                </div>
+                            </div>
+                        }
+                        
+                    </div>
+                }
+            </div>
+        }
+    </div>
+</div>
+
+<div class="windows">
+    <div id="addLesson" class="window hidden">
+        <div class="card">
+            <form>
+                <div class="card-header">
+                    Ajouter un cours
+                </div>
+                <div class="card-body">
+                    <input type="hidden" id="lesson-id" />
+                    <div class="form-group">
+                        <label for="teacher-name">Nom de l'élève :</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="student-name" placeholder="placer ici un élève" required>
+                            <div class="invalid-tooltip">
+                                Merci de donner un nom.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="lesson-name">Nom du cours :</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="lesson-name" placeholder="placer ici un cours" required>
+                            <div class="invalid-tooltip">
+                                Merci de donner un nom.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="lesson-date">Date du cours :</label>
+                        <div class="input-group">
+                            <select class="custom-select" id="lesson-date">
+                                <option value="0" selected>Lundi</option>
+                                <option value="1">Mardi</option>
+                                <option value="2">Mercredi</option>
+                                <option value="3">Jeudi</option>
+                                <option value="4">vendredi</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="lesson-start">Début du cours :</label>
+                        <select class="custom-select" id="lesson-start">
+                            @foreach (Hour h in ViewBag.hours)
+                            {
+                                <option value="@h.ID" selected="@(h.ID == 0)">@h.ToString()</option>
+                            }
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="lesson-duration">Durée du cours :</label>
+                        <select class="custom-select" id="lesson-duration">
+                            <option value="1" selected>1 heure</option>
+                            <option value="2">2 heures</option>
+                            <option value="3">3 heures</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="lesson-week">Semaine :</label>
+                        <select class="custom-select" id="lesson-week">
+                            <option value="" selected></option>
+                            <option value="SEM.A">SEM.A</option>
+                            <option value="SEM.B">SEM.B</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="lesson-room">Nom de la salle :</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="lesson-room" placeholder="placer ici une salle">
+                            <div class="invalid-tooltip">
+                                Merci de donner un nom.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button type="submit" class="btn btn-primary submit-button">Valider</button>
+                    <button type="button" class="btn btn-secondary cancel-button">Annuler</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="modifyLesson" class="window hidden">
+        <div class="card">
+            <form>
+                <div class="card-header">
+                    Modifier un cours
+                </div>
+                <div class="card-body">
+                    <input type="hidden" id="lesson-id" />
+                    <div class="form-group">
+                        <label for="teacher-name">Nom de l'élève :</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="student-name" placeholder="placer ici un élève" required>
+                            <div class="invalid-tooltip">
+                                Merci de donner un nom.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="lesson-name">Nom du cours :</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="lesson-name" placeholder="placer ici un cours" required>
+                            <div class="invalid-tooltip">
+                                Merci de donner un nom.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="lesson-date">Date du cours :</label>
+                        <div class="input-group">
+                            <select class="custom-select" id="lesson-date">
+                                <option value="0" selected>Lundi</option>
+                                <option value="1">Mardi</option>
+                                <option value="2">Mercredi</option>
+                                <option value="3">Jeudi</option>
+                                <option value="4">vendredi</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="lesson-start">Début du cours :</label>
+                        <select class="custom-select" id="lesson-start">
+                            @foreach (Hour h in ViewBag.hours)
+                            {
+                                <option value="@h.ID" selected="@(h.ID == 0)">@h.ToString()</option>
+                            }
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="lesson-duration">Durée du cours :</label>
+                        <select class="custom-select" id="lesson-duration">
+                            <option value="1" selected>1 heure</option>
+                            <option value="2">2 heures</option>
+                            <option value="3">3 heures</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="lesson-week">Semaine :</label>
+                        <select class="custom-select" id="lesson-week">
+                            <option value="" selected></option>
+                            <option value="SEM.A">SEM.A</option>
+                            <option value="SEM.B">SEM.B</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="lesson-room">Nom de la salle :</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="lesson-room" placeholder="placer ici une salle">
+                            <div class="invalid-tooltip">
+                                Merci de donner un nom.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button type="submit" class="btn btn-primary submit-button">Valider</button>
+                    <button type="button" class="btn btn-secondary cancel-button">Annuler</button>
+                    <button type="button" class="btn btn-danger delete-button">Supprimer</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="deleteLesson" class="window hidden">
+        <div class="card">
+            <div class="card-header">
+                Supprimer un cours
+            </div>
+            <div class="card-body">
+                Êtes vous sur de vouloir supprimer ce cours ?
+            </div>
+            <div class="card-footer">
+                <button type="submit" class="btn btn-danger submit-button">Supprimer</button>
+                <button type="button" class="btn btn-secondary cancel-button">Annuler</button>
+            </div>
+        </div>
+    </div>
+</div>

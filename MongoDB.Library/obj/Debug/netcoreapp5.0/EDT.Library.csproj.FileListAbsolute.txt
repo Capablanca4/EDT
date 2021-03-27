@@ -1,0 +1,12 @@
+F:\Dev\MongoDB.WebApp\MongoDB.Library\bin\Debug\netcoreapp5.0\EDT.Library.deps.json
+F:\Dev\MongoDB.WebApp\MongoDB.Library\bin\Debug\netcoreapp5.0\EDT.Library.dll
+F:\Dev\MongoDB.WebApp\MongoDB.Library\bin\Debug\netcoreapp5.0\ref\EDT.Library.dll
+F:\Dev\MongoDB.WebApp\MongoDB.Library\bin\Debug\netcoreapp5.0\EDT.Library.pdb
+F:\Dev\MongoDB.WebApp\MongoDB.Library\obj\Debug\netcoreapp5.0\EDT.Library.csprojAssemblyReference.cache
+F:\Dev\MongoDB.WebApp\MongoDB.Library\obj\Debug\netcoreapp5.0\EDT.Library.GeneratedMSBuildEditorConfig.editorconfig
+F:\Dev\MongoDB.WebApp\MongoDB.Library\obj\Debug\netcoreapp5.0\EDT.Library.AssemblyInfoInputs.cache
+F:\Dev\MongoDB.WebApp\MongoDB.Library\obj\Debug\netcoreapp5.0\EDT.Library.AssemblyInfo.cs
+F:\Dev\MongoDB.WebApp\MongoDB.Library\obj\Debug\netcoreapp5.0\EDT.Library.csproj.CoreCompileInputs.cache
+F:\Dev\MongoDB.WebApp\MongoDB.Library\obj\Debug\netcoreapp5.0\EDT.Library.dll
+F:\Dev\MongoDB.WebApp\MongoDB.Library\obj\Debug\netcoreapp5.0\ref\EDT.Library.dll
+F:\Dev\MongoDB.WebApp\MongoDB.Library\obj\Debug\netcoreapp5.0\EDT.Library.pdb

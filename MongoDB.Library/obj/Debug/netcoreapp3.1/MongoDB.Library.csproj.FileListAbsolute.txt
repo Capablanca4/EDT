@@ -1,0 +1,9 @@
+F:\Dev\MongoDB.WebApp\MongoDB.Library\bin\Debug\netcoreapp3.1\MongoDB.Library.deps.json
+F:\Dev\MongoDB.WebApp\MongoDB.Library\bin\Debug\netcoreapp3.1\MongoDB.Library.dll
+F:\Dev\MongoDB.WebApp\MongoDB.Library\obj\Debug\netcoreapp3.1\MongoDB.Library.AssemblyInfoInputs.cache
+F:\Dev\MongoDB.WebApp\MongoDB.Library\obj\Debug\netcoreapp3.1\MongoDB.Library.AssemblyInfo.cs
+F:\Dev\MongoDB.WebApp\MongoDB.Library\bin\Debug\netcoreapp3.1\MongoDB.Library.pdb
+F:\Dev\MongoDB.WebApp\MongoDB.Library\obj\Debug\netcoreapp3.1\MongoDB.Library.csproj.CoreCompileInputs.cache
+F:\Dev\MongoDB.WebApp\MongoDB.Library\obj\Debug\netcoreapp3.1\MongoDB.Library.dll
+F:\Dev\MongoDB.WebApp\MongoDB.Library\obj\Debug\netcoreapp3.1\MongoDB.Library.pdb
+F:\Dev\MongoDB.WebApp\MongoDB.Library\obj\Debug\netcoreapp3.1\MongoDB.Library.csprojAssemblyReference.cache

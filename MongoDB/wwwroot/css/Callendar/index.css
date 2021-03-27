@@ -1,0 +1,200 @@
+﻿/*Index :
+    - Calendar
+    - Lesson
+    - Windows
+    - Shared
+    - Print
+*/
+
+/*Calendar*/
+
+.calendar{
+    height: 77.5vh;
+}
+
+.calendar-hours {
+    height: 100%;
+    width: 10%;
+}
+
+.calendar-days {
+    height: 100%;
+    width: 90%;
+}
+
+    .calendar-day {
+        height: 100%;
+        width: 20%;
+    }
+
+.day-name {
+    background-color: rgba(0, 0, 0, 0.1);
+    font-weight: bolder;
+    font-size: 130%;
+}
+
+.day-hour{
+    cursor: pointer;
+}
+
+.cell {
+    text-align: center;
+    border: 1px solid #d4d9dd;
+    height: 10%;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
+
+    .cell > p {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+/*Lesson*/
+
+.lesson {
+    margin: 2%;
+    border: solid 2px rgb(33, 139, 244);
+    border-radius: 10px;
+    background-color: rgba(118, 172, 225, 0.4);
+    line-height: 120%;
+    /*cursor: grab;*/
+}
+
+    .lesson-student{
+        font-weight: bold;
+    }
+
+    .lesson[duration="1"] {
+        height: 90%;
+    }
+
+    .lesson[duration="2"] {
+        height: 190%;
+    }
+
+    .lesson[duration="3"] {
+        height: 290%;
+    }
+
+    .lesson[duration="4"] {
+        height: 390%;
+    }
+
+.invisible{
+    opacity: 0;
+}
+
+.oneElement {
+    width: 100%;
+}
+
+.twoElement {
+    width: 50%;
+}
+
+.threeElement {
+    width: 33.3%;
+}
+
+.fourElement {
+    width: 25%;
+}
+
+.fiveElement {
+    width: 20%;
+}
+
+.sixElement {
+    width: 16.7%;
+}
+
+/*Windows*/
+
+.window {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0,0,0,0.5);
+}
+
+    .window > .card {
+        animation-duration: 1s;
+        animation-name: slidein;
+        width: 50%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+    }
+
+@keyframes slidein {
+    from {
+        margin-top: -40%;
+        opacity: 0;
+    }
+
+    to {
+        margin-top: 0%;
+    }
+}
+
+/*Shared*/
+
+.flex {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-evenly{
+    justify-content: space-evenly;
+}
+
+.hidden {
+    display: none;
+}
+
+/*Print*/
+
+@media print{
+    body {
+        -webkit-print-color-adjust: exact !important;
+    }
+
+    footer{
+        display: none;
+    }
+
+    .calendar{
+        height: 89vh;
+        width: 99vw;
+        transform: translateX(-7vh);
+    }
+
+    .lesson {
+        margin: 0%;
+        border-color: black;
+    }
+
+        .lesson[duration="1"] {
+            height: 100%;
+        }
+
+        .lesson[duration="2"] {
+            height: 200%;
+        }
+
+        .lesson[duration="3"] {
+            height: 300%;
+        }
+
+        .lesson[duration="4"] {
+            height: 400%;
+        }
+}
