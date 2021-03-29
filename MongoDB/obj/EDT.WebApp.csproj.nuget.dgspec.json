@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "F:\\Dev\\MongoDB.WebApp\\MongoDB\\EDT.WebApp.csproj": {}
+    "C:\\Users\\pierre2\\Source\\Repos\\EDT\\MongoDB\\EDT.WebApp.csproj": {}
   },
   "projects": {
-    "F:\\Dev\\MongoDB.WebApp\\MongoDB.Library\\EDT.Library.csproj": {
+    "C:\\Users\\pierre2\\Source\\Repos\\EDT\\MongoDB.Library\\EDT.Library.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Dev\\MongoDB.WebApp\\MongoDB.Library\\EDT.Library.csproj",
+        "projectUniqueName": "C:\\Users\\pierre2\\Source\\Repos\\EDT\\MongoDB.Library\\EDT.Library.csproj",
         "projectName": "EDT.Library",
-        "projectPath": "F:\\Dev\\MongoDB.WebApp\\MongoDB.Library\\EDT.Library.csproj",
+        "projectPath": "C:\\Users\\pierre2\\Source\\Repos\\EDT\\MongoDB.Library\\EDT.Library.csproj",
         "packagesPath": "C:\\Users\\pierre2\\.nuget\\packages\\",
-        "outputPath": "F:\\Dev\\MongoDB.WebApp\\MongoDB.Library\\obj\\",
+        "outputPath": "C:\\Users\\pierre2\\Source\\Repos\\EDT\\MongoDB.Library\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
@@ -65,21 +65,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "F:\\Dev\\MongoDB.WebApp\\MongoDB\\EDT.WebApp.csproj": {
+    "C:\\Users\\pierre2\\Source\\Repos\\EDT\\MongoDB\\EDT.WebApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Dev\\MongoDB.WebApp\\MongoDB\\EDT.WebApp.csproj",
+        "projectUniqueName": "C:\\Users\\pierre2\\Source\\Repos\\EDT\\MongoDB\\EDT.WebApp.csproj",
         "projectName": "EDT.WebApp",
-        "projectPath": "F:\\Dev\\MongoDB.WebApp\\MongoDB\\EDT.WebApp.csproj",
+        "projectPath": "C:\\Users\\pierre2\\Source\\Repos\\EDT\\MongoDB\\EDT.WebApp.csproj",
         "packagesPath": "C:\\Users\\pierre2\\.nuget\\packages\\",
-        "outputPath": "F:\\Dev\\MongoDB.WebApp\\MongoDB\\obj\\",
+        "outputPath": "C:\\Users\\pierre2\\Source\\Repos\\EDT\\MongoDB\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
@@ -98,8 +98,8 @@
           "net5.0": {
             "targetAlias": "netcoreapp5.0",
             "projectReferences": {
-              "F:\\Dev\\MongoDB.WebApp\\MongoDB.Library\\EDT.Library.csproj": {
-                "projectPath": "F:\\Dev\\MongoDB.WebApp\\MongoDB.Library\\EDT.Library.csproj"
+              "C:\\Users\\pierre2\\Source\\Repos\\EDT\\MongoDB.Library\\EDT.Library.csproj": {
+                "projectPath": "C:\\Users\\pierre2\\Source\\Repos\\EDT\\MongoDB.Library\\EDT.Library.csproj"
               }
             }
           }
@@ -161,7 +161,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }
