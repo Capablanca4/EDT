@@ -7,9 +7,9 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:5.0-buster-slim AS build
 WORKDIR /src
-COPY ["MongoDB/MongoDB.WebApp.csproj", "MongoDB/"]
-COPY ["MongoDB.Library/MongoDB.Library.csproj", "MongoDB.Library/"]
-RUN dotnet restore "MongoDB/MongoDB.WebApp.csproj"
+COPY ["MongoDB/EDT.WebApp.csproj", "MongoDB/"]
+COPY ["MongoDB.Library/EDT.Library.csproj", "MongoDB.Library/"]
+RUN dotnet restore "MongoDB/EDT.WebApp.csproj"
 COPY . .
 WORKDIR "/src/MongoDB"
 RUN dotnet build "EDT.WebApp.csproj" -c Release -o /app/build
