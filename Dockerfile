@@ -12,10 +12,10 @@ COPY ["MongoDB.Library/MongoDB.Library.csproj", "MongoDB.Library/"]
 RUN dotnet restore "MongoDB/MongoDB.WebApp.csproj"
 COPY . .
 WORKDIR "/src/MongoDB"
-RUN dotnet build "MongoDB.WebApp.csproj" -c Release -o /app/build
+RUN dotnet build "EDT.WebApp.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "MongoDB.WebApp.csproj" -c Release -o /app/publish
+RUN dotnet publish "EDT.WebApp.csproj" -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
