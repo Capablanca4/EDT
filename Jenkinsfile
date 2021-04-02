@@ -1,28 +1,14 @@
-pipeline {
-  
-  agent any
-  
-  stages {
-    
-    stage("build") {
-      
-      steps {
-        echo 'building the application ...'
-      }
+node{
+    stage('Initialize'){
+        def dockerHome = tool 'myDocker'
+        env.PATH = "${dockerHome}/bin:${env.PATH}"
     }
     
-    stage("test") {
-      
-      steps {
-        echo 'testing the application ...'
-      }
+    stage('Run container on Dev Server'){
+        docker.withRegistry('tcp://host.docker.internal:2375') {
+            docker.build('capablanca4/edt:1.0.0')
+            sh 'docker run -d -p 8081:80 capablanca4/edt:1.0.0'
+        }
+        
     }
-    
-    stage("deploy") {
-      
-      steps {
-        echo 'deploying the application ...'
-      }
-    }
-  }
 }
